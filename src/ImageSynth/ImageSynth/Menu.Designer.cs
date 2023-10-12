@@ -44,6 +44,7 @@
             this.ProgressLabel = new System.Windows.Forms.Label();
             this.SaveDatasetImageButton = new System.Windows.Forms.Button();
             this.TitleBarPanel = new System.Windows.Forms.Panel();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
@@ -59,13 +60,12 @@
             this.GeneratedPictureBox = new System.Windows.Forms.PictureBox();
             this.GenerateImageButton = new System.Windows.Forms.Button();
             this.SynthesizePanel = new System.Windows.Forms.Panel();
+            this.SynthesizeProgressLabel = new System.Windows.Forms.Label();
             this.FPSLabel = new System.Windows.Forms.Label();
             this.GenerateVideoButton = new System.Windows.Forms.Button();
             this.VideoFPSTextBox = new System.Windows.Forms.TextBox();
             this.SynthesizeLabel = new System.Windows.Forms.Label();
             this.SaveGeneratedImageButton = new System.Windows.Forms.Button();
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.SynthesizeProgressLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InputPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OutputPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatasetPictureBox)).BeginInit();
@@ -106,7 +106,7 @@
             this.ResetDrawingButton.Location = new System.Drawing.Point(181, 284);
             this.ResetDrawingButton.Name = "ResetDrawingButton";
             this.ResetDrawingButton.Size = new System.Drawing.Size(86, 36);
-            this.ResetDrawingButton.TabIndex = 0;
+            this.ResetDrawingButton.TabIndex = 8;
             this.ResetDrawingButton.Text = "Reset Canvas";
             this.ResetDrawingButton.UseVisualStyleBackColor = false;
             this.ResetDrawingButton.Click += new System.EventHandler(this.ResetDrawingButton_Click);
@@ -120,7 +120,7 @@
             this.UpdateDatasetButton.Location = new System.Drawing.Point(279, 284);
             this.UpdateDatasetButton.Name = "UpdateDatasetButton";
             this.UpdateDatasetButton.Size = new System.Drawing.Size(36, 36);
-            this.UpdateDatasetButton.TabIndex = 0;
+            this.UpdateDatasetButton.TabIndex = 9;
             this.UpdateDatasetButton.Text = "Add";
             this.UpdateDatasetButton.UseVisualStyleBackColor = false;
             this.UpdateDatasetButton.Click += new System.EventHandler(this.UpdateDatasetButton_Click);
@@ -134,7 +134,7 @@
             this.DatasetNameTextBox.Location = new System.Drawing.Point(11, 34);
             this.DatasetNameTextBox.Name = "DatasetNameTextBox";
             this.DatasetNameTextBox.Size = new System.Drawing.Size(268, 26);
-            this.DatasetNameTextBox.TabIndex = 0;
+            this.DatasetNameTextBox.TabIndex = 3;
             this.DatasetNameTextBox.TextChanged += new System.EventHandler(this.DatasetNameTextBox_TextChanged);
             // 
             // DatasetPictureBox
@@ -156,7 +156,7 @@
             this.LoadDatasetButton.Location = new System.Drawing.Point(547, 284);
             this.LoadDatasetButton.Name = "LoadDatasetButton";
             this.LoadDatasetButton.Size = new System.Drawing.Size(128, 36);
-            this.LoadDatasetButton.TabIndex = 0;
+            this.LoadDatasetButton.TabIndex = 12;
             this.LoadDatasetButton.Text = "Refresh";
             this.LoadDatasetButton.UseVisualStyleBackColor = false;
             this.LoadDatasetButton.Click += new System.EventHandler(this.LoadDatasetButton_Click);
@@ -170,7 +170,7 @@
             this.AnalyzeButton.Location = new System.Drawing.Point(479, 284);
             this.AnalyzeButton.Name = "AnalyzeButton";
             this.AnalyzeButton.Size = new System.Drawing.Size(56, 36);
-            this.AnalyzeButton.TabIndex = 0;
+            this.AnalyzeButton.TabIndex = 11;
             this.AnalyzeButton.Text = "Analyze";
             this.AnalyzeButton.UseVisualStyleBackColor = false;
             this.AnalyzeButton.Click += new System.EventHandler(this.AnalyzeButton_Click);
@@ -185,7 +185,7 @@
             this.DrawingColorButton.Location = new System.Drawing.Point(11, 284);
             this.DrawingColorButton.Name = "DrawingColorButton";
             this.DrawingColorButton.Size = new System.Drawing.Size(85, 18);
-            this.DrawingColorButton.TabIndex = 0;
+            this.DrawingColorButton.TabIndex = 5;
             this.DrawingColorButton.Text = "Brush Color";
             this.DrawingColorButton.UseVisualStyleBackColor = false;
             this.DrawingColorButton.Click += new System.EventHandler(this.DrawingColorButton_Click);
@@ -199,7 +199,7 @@
             this.LoadImageButton.Location = new System.Drawing.Point(96, 284);
             this.LoadImageButton.Name = "LoadImageButton";
             this.LoadImageButton.Size = new System.Drawing.Size(85, 36);
-            this.LoadImageButton.TabIndex = 0;
+            this.LoadImageButton.TabIndex = 7;
             this.LoadImageButton.Text = "Load Image";
             this.LoadImageButton.UseVisualStyleBackColor = false;
             this.LoadImageButton.Click += new System.EventHandler(this.LoadImageButton_Click);
@@ -213,7 +213,7 @@
             this.GlobalScaleTextBox.Location = new System.Drawing.Point(279, 34);
             this.GlobalScaleTextBox.Name = "GlobalScaleTextBox";
             this.GlobalScaleTextBox.Size = new System.Drawing.Size(63, 26);
-            this.GlobalScaleTextBox.TabIndex = 0;
+            this.GlobalScaleTextBox.TabIndex = 4;
             this.GlobalScaleTextBox.Text = "64";
             this.GlobalScaleTextBox.TextChanged += new System.EventHandler(this.GlobalScaleTextBox_TextChanged);
             // 
@@ -226,7 +226,7 @@
             this.GenerateDatasetButton.Location = new System.Drawing.Point(315, 284);
             this.GenerateDatasetButton.Name = "GenerateDatasetButton";
             this.GenerateDatasetButton.Size = new System.Drawing.Size(164, 36);
-            this.GenerateDatasetButton.TabIndex = 0;
+            this.GenerateDatasetButton.TabIndex = 10;
             this.GenerateDatasetButton.Text = "Generate Dataset From Images";
             this.GenerateDatasetButton.UseVisualStyleBackColor = false;
             this.GenerateDatasetButton.Click += new System.EventHandler(this.GenerateDatasetButton_Click);
@@ -250,7 +250,7 @@
             this.SaveDatasetImageButton.Location = new System.Drawing.Point(675, 284);
             this.SaveDatasetImageButton.Name = "SaveDatasetImageButton";
             this.SaveDatasetImageButton.Size = new System.Drawing.Size(128, 36);
-            this.SaveDatasetImageButton.TabIndex = 0;
+            this.SaveDatasetImageButton.TabIndex = 13;
             this.SaveDatasetImageButton.Text = "Save";
             this.SaveDatasetImageButton.UseVisualStyleBackColor = false;
             this.SaveDatasetImageButton.Click += new System.EventHandler(this.SaveDatasetImageButton_Click);
@@ -267,6 +267,18 @@
             this.TitleBarPanel.TabIndex = 0;
             this.TitleBarPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBarPanel_MouseDown);
             // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.TitleLabel.Location = new System.Drawing.Point(8, 5);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(88, 16);
+            this.TitleLabel.TabIndex = 0;
+            this.TitleLabel.Text = "ImageSynth";
+            this.TitleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleLabel_MouseDown);
+            // 
             // MinimizeButton
             // 
             this.MinimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -276,7 +288,7 @@
             this.MinimizeButton.Location = new System.Drawing.Point(1070, 0);
             this.MinimizeButton.Name = "MinimizeButton";
             this.MinimizeButton.Size = new System.Drawing.Size(26, 26);
-            this.MinimizeButton.TabIndex = 1;
+            this.MinimizeButton.TabIndex = 0;
             this.MinimizeButton.Text = "_";
             this.MinimizeButton.UseVisualStyleBackColor = false;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
@@ -290,7 +302,7 @@
             this.CloseButton.Location = new System.Drawing.Point(1096, 0);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(26, 26);
-            this.CloseButton.TabIndex = 0;
+            this.CloseButton.TabIndex = 1;
             this.CloseButton.Text = "X";
             this.CloseButton.UseVisualStyleBackColor = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
@@ -318,7 +330,7 @@
             this.MainPanel.Location = new System.Drawing.Point(10, 117);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(815, 344);
-            this.MainPanel.TabIndex = 0;
+            this.MainPanel.TabIndex = 5;
             // 
             // PreviewLabel
             // 
@@ -372,7 +384,7 @@
             this.BrushSizeTextBox.Location = new System.Drawing.Point(39, 302);
             this.BrushSizeTextBox.Name = "BrushSizeTextBox";
             this.BrushSizeTextBox.Size = new System.Drawing.Size(57, 18);
-            this.BrushSizeTextBox.TabIndex = 0;
+            this.BrushSizeTextBox.TabIndex = 6;
             this.BrushSizeTextBox.Text = "10";
             // 
             // DatasetNamePanel
@@ -387,7 +399,7 @@
             this.DatasetNamePanel.Location = new System.Drawing.Point(10, 36);
             this.DatasetNamePanel.Name = "DatasetNamePanel";
             this.DatasetNamePanel.Size = new System.Drawing.Size(1102, 71);
-            this.DatasetNamePanel.TabIndex = 0;
+            this.DatasetNamePanel.TabIndex = 2;
             // 
             // SizePreviewLabel
             // 
@@ -439,7 +451,7 @@
             this.GenerateImageButton.Location = new System.Drawing.Point(12, 284);
             this.GenerateImageButton.Name = "GenerateImageButton";
             this.GenerateImageButton.Size = new System.Drawing.Size(64, 36);
-            this.GenerateImageButton.TabIndex = 0;
+            this.GenerateImageButton.TabIndex = 14;
             this.GenerateImageButton.Text = "Input ->";
             this.GenerateImageButton.UseVisualStyleBackColor = false;
             this.GenerateImageButton.Click += new System.EventHandler(this.GenerateImageButton_Click);
@@ -458,7 +470,17 @@
             this.SynthesizePanel.Location = new System.Drawing.Point(835, 117);
             this.SynthesizePanel.Name = "SynthesizePanel";
             this.SynthesizePanel.Size = new System.Drawing.Size(277, 344);
-            this.SynthesizePanel.TabIndex = 0;
+            this.SynthesizePanel.TabIndex = 14;
+            // 
+            // SynthesizeProgressLabel
+            // 
+            this.SynthesizeProgressLabel.AutoSize = true;
+            this.SynthesizeProgressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(155)))), ((int)(((byte)(150)))));
+            this.SynthesizeProgressLabel.Location = new System.Drawing.Point(74, 320);
+            this.SynthesizeProgressLabel.Name = "SynthesizeProgressLabel";
+            this.SynthesizeProgressLabel.Size = new System.Drawing.Size(52, 13);
+            this.SynthesizeProgressLabel.TabIndex = 0;
+            this.SynthesizeProgressLabel.Text = "Waiting...";
             // 
             // FPSLabel
             // 
@@ -468,7 +490,7 @@
             this.FPSLabel.Location = new System.Drawing.Point(76, 307);
             this.FPSLabel.Name = "FPSLabel";
             this.FPSLabel.Size = new System.Drawing.Size(22, 9);
-            this.FPSLabel.TabIndex = 1;
+            this.FPSLabel.TabIndex = 0;
             this.FPSLabel.Text = "FPS:";
             // 
             // GenerateVideoButton
@@ -481,7 +503,7 @@
             this.GenerateVideoButton.Location = new System.Drawing.Point(76, 284);
             this.GenerateVideoButton.Name = "GenerateVideoButton";
             this.GenerateVideoButton.Size = new System.Drawing.Size(64, 18);
-            this.GenerateVideoButton.TabIndex = 1;
+            this.GenerateVideoButton.TabIndex = 15;
             this.GenerateVideoButton.Text = "Video ->";
             this.GenerateVideoButton.UseVisualStyleBackColor = false;
             this.GenerateVideoButton.Click += new System.EventHandler(this.GenerateVideoButton_Click);
@@ -495,7 +517,7 @@
             this.VideoFPSTextBox.Location = new System.Drawing.Point(98, 302);
             this.VideoFPSTextBox.Name = "VideoFPSTextBox";
             this.VideoFPSTextBox.Size = new System.Drawing.Size(42, 18);
-            this.VideoFPSTextBox.TabIndex = 2;
+            this.VideoFPSTextBox.TabIndex = 16;
             this.VideoFPSTextBox.Text = "10";
             // 
             // SynthesizeLabel
@@ -518,32 +540,10 @@
             this.SaveGeneratedImageButton.Location = new System.Drawing.Point(140, 284);
             this.SaveGeneratedImageButton.Name = "SaveGeneratedImageButton";
             this.SaveGeneratedImageButton.Size = new System.Drawing.Size(128, 36);
-            this.SaveGeneratedImageButton.TabIndex = 0;
+            this.SaveGeneratedImageButton.TabIndex = 17;
             this.SaveGeneratedImageButton.Text = "Save";
             this.SaveGeneratedImageButton.UseVisualStyleBackColor = false;
             this.SaveGeneratedImageButton.Click += new System.EventHandler(this.SaveGeneratedImageButton_Click);
-            // 
-            // TitleLabel
-            // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.TitleLabel.Location = new System.Drawing.Point(8, 5);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(88, 16);
-            this.TitleLabel.TabIndex = 3;
-            this.TitleLabel.Text = "ImageSynth";
-            this.TitleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleLabel_MouseDown);
-            // 
-            // SynthesizeProgressLabel
-            // 
-            this.SynthesizeProgressLabel.AutoSize = true;
-            this.SynthesizeProgressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(155)))), ((int)(((byte)(150)))));
-            this.SynthesizeProgressLabel.Location = new System.Drawing.Point(74, 320);
-            this.SynthesizeProgressLabel.Name = "SynthesizeProgressLabel";
-            this.SynthesizeProgressLabel.Size = new System.Drawing.Size(52, 13);
-            this.SynthesizeProgressLabel.TabIndex = 1;
-            this.SynthesizeProgressLabel.Text = "Waiting...";
             // 
             // Menu
             // 
