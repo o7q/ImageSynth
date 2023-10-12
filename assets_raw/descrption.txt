@@ -1,0 +1,1 @@
+Transfer styles and synthesize new images based off of pre-generated datasets.
