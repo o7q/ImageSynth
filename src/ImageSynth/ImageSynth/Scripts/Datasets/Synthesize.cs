@@ -87,7 +87,7 @@ namespace ImageSynth.Datasets
             int y_index = 0;
             for (int i = 0; i < imageArea * 3; i += 3)
             {
-                int averagePixel;
+                int error;
 
                 if (x_index == imageWidth)
                 {
@@ -95,17 +95,17 @@ namespace ImageSynth.Datasets
                     y_index++;
                 }
 
-                int minimum = int.MaxValue;
+                int errorMinimum = int.MaxValue;
 
                 Color bestPixel = Color.FromArgb(255, 0, 0, 0);
 
                 for (int j = 0; j < imageCount; j++)
                 {
-                    averagePixel = (int)Math.Sqrt(0.299 * Math.Pow(imageint[j, i] - inputImage[i], 2) + 0.587 * Math.Pow(imageint[j, i + 1] - inputImage[i + 1], 2) + 0.114 * Math.Pow(imageint[j, i + 2] - inputImage[i + 2], 2));
+                    error = (int)Math.Sqrt(0.299 * Math.Pow(imageint[j, i] - inputImage[i], 2) + 0.587 * Math.Pow(imageint[j, i + 1] - inputImage[i + 1], 2) + 0.114 * Math.Pow(imageint[j, i + 2] - inputImage[i + 2], 2));
 
-                    if (minimum > averagePixel)
+                    if (errorMinimum > error)
                     {
-                        minimum = averagePixel;
+                        errorMinimum = error;
                         bestPixel = Color.FromArgb(255, imageint[j, i], imageint[j, i + 1], imageint[j, i + 2]);
                     }
                 }

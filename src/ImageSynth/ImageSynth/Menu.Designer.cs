@@ -48,6 +48,8 @@
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.GenerateRandomImageButton = new System.Windows.Forms.Button();
+            this.GlowButton = new System.Windows.Forms.Button();
             this.PreviewLabel = new System.Windows.Forms.Label();
             this.VisualizeLabel = new System.Windows.Forms.Label();
             this.InputLabel = new System.Windows.Forms.Label();
@@ -310,6 +312,8 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.MainPanel.Controls.Add(this.GenerateRandomImageButton);
+            this.MainPanel.Controls.Add(this.GlowButton);
             this.MainPanel.Controls.Add(this.AnalyzeButton);
             this.MainPanel.Controls.Add(this.PreviewLabel);
             this.MainPanel.Controls.Add(this.VisualizeLabel);
@@ -331,6 +335,36 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(815, 344);
             this.MainPanel.TabIndex = 5;
+            // 
+            // GenerateRandomImageButton
+            // 
+            this.GenerateRandomImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(25)))));
+            this.GenerateRandomImageButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(50)))));
+            this.GenerateRandomImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GenerateRandomImageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenerateRandomImageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(200)))));
+            this.GenerateRandomImageButton.Location = new System.Drawing.Point(11, 320);
+            this.GenerateRandomImageButton.Name = "GenerateRandomImageButton";
+            this.GenerateRandomImageButton.Size = new System.Drawing.Size(85, 18);
+            this.GenerateRandomImageButton.TabIndex = 15;
+            this.GenerateRandomImageButton.Text = "Generate Noise";
+            this.GenerateRandomImageButton.UseVisualStyleBackColor = false;
+            this.GenerateRandomImageButton.Click += new System.EventHandler(this.GenerateRandomImageButton_Click);
+            // 
+            // GlowButton
+            // 
+            this.GlowButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(25)))));
+            this.GlowButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(50)))));
+            this.GlowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GlowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.GlowButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(205)))), ((int)(((byte)(200)))));
+            this.GlowButton.Location = new System.Drawing.Point(96, 320);
+            this.GlowButton.Name = "GlowButton";
+            this.GlowButton.Size = new System.Drawing.Size(85, 18);
+            this.GlowButton.TabIndex = 14;
+            this.GlowButton.Text = "Generate Blur";
+            this.GlowButton.UseVisualStyleBackColor = false;
+            this.GlowButton.Click += new System.EventHandler(this.GlowButton_Click);
             // 
             // PreviewLabel
             // 
@@ -615,6 +649,8 @@
         private System.Windows.Forms.TextBox VideoFPSTextBox;
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Label SynthesizeProgressLabel;
+        private System.Windows.Forms.Button GlowButton;
+        private System.Windows.Forms.Button GenerateRandomImageButton;
     }
 }
 

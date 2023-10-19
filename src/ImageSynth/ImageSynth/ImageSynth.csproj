@@ -65,6 +65,7 @@
     <Compile Include="Scripts\Datasets\Export\Generate.cs" />
     <Compile Include="Scripts\Datasets\Vision.cs" />
     <Compile Include="Scripts\Datasets\Compare.cs" />
+    <Compile Include="Scripts\GaussianBlur.cs" />
     <Compile Include="Scripts\Shell.cs" />
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

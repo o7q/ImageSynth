@@ -12,6 +12,7 @@ using static ImageSynth.Datasets.Synthesize;
 using static ImageSynth.Datasets.Export.Append;
 using static ImageSynth.Datasets.Export.Generate;
 using static ImageSynth.BitmapTools.Transform;
+using SuperfastBlur;
 
 namespace ImageSynth
 {
@@ -131,7 +132,6 @@ namespace ImageSynth
                     g.DrawImage(imageToDraw, new Rectangle(0, 0, 256, 256));
                 }
 
-                InputPictureBox.Image = drawingBitmap;
                 UpdateInputBitmapPreview();
             }
         }
@@ -277,6 +277,47 @@ namespace ImageSynth
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void GlowButton_Click(object sender, EventArgs e)
+        {
+            var blur = new GaussianBlur(drawingBitmap);
+            Bitmap blurImage = blur.Process(2);
+
+            using (Graphics g = Graphics.FromImage(drawingBitmap))
+            {
+                g.DrawImage(blurImage, new Rectangle(0, 0, 256, 256));
+            }
+
+            UpdateInputBitmapPreview();
+        }
+
+        private void GenerateRandomImageButton_Click(object sender, EventArgs e)
+        {
+            Bitmap noiseImage = new Bitmap(imageWidth, imageWidth);
+            int x_index = 0;
+            int y_index = 0;
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
+            for (int i = 0; i < imageArea * 3; i += 3)
+            {
+                if (x_index == imageWidth)
+                {
+                    x_index = 0;
+                    y_index++;
+                }
+
+                Color pixelColor = Color.FromArgb(255, rnd.Next(256) / rnd.Next(1, 5), rnd.Next(256) / rnd.Next(1, 5), rnd.Next(256) / rnd.Next(1, 5));
+                noiseImage.SetPixel(x_index, y_index, pixelColor);
+
+                x_index++;
+            }
+
+            using (Graphics g = Graphics.FromImage(drawingBitmap))
+            {
+                g.DrawImage(noiseImage, new Rectangle(0, 0, 256, 256));
+            }
+
+            UpdateInputBitmapPreview();
         }
     }
 }
