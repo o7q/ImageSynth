@@ -1,0 +1,3 @@
+~ v1.1.0.0
+- Added a button to generate a random noise map
+- Added a button to apply a gaussian blur (gaussian blur by: https://github.com/mdymel/superfastblur)

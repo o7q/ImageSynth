@@ -276,9 +276,9 @@
             this.TitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.TitleLabel.Location = new System.Drawing.Point(8, 5);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(88, 16);
+            this.TitleLabel.Size = new System.Drawing.Size(132, 16);
             this.TitleLabel.TabIndex = 0;
-            this.TitleLabel.Text = "ImageSynth";
+            this.TitleLabel.Text = "ImageSynth v1.1.0";
             this.TitleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleLabel_MouseDown);
             // 
             // MinimizeButton
@@ -346,7 +346,8 @@
             this.GenerateRandomImageButton.Location = new System.Drawing.Point(11, 320);
             this.GenerateRandomImageButton.Name = "GenerateRandomImageButton";
             this.GenerateRandomImageButton.Size = new System.Drawing.Size(85, 18);
-            this.GenerateRandomImageButton.TabIndex = 15;
+            this.GenerateRandomImageButton.TabIndex = 0;
+            this.GenerateRandomImageButton.TabStop = false;
             this.GenerateRandomImageButton.Text = "Generate Noise";
             this.GenerateRandomImageButton.UseVisualStyleBackColor = false;
             this.GenerateRandomImageButton.Click += new System.EventHandler(this.GenerateRandomImageButton_Click);
@@ -361,7 +362,8 @@
             this.GlowButton.Location = new System.Drawing.Point(96, 320);
             this.GlowButton.Name = "GlowButton";
             this.GlowButton.Size = new System.Drawing.Size(85, 18);
-            this.GlowButton.TabIndex = 14;
+            this.GlowButton.TabIndex = 0;
+            this.GlowButton.TabStop = false;
             this.GlowButton.Text = "Generate Blur";
             this.GlowButton.UseVisualStyleBackColor = false;
             this.GlowButton.Click += new System.EventHandler(this.GlowButton_Click);
