@@ -10,6 +10,9 @@
 # Overview
 ImageSynth builds new images based on features from trained datasets. It can be used to style transfer images and videos. It also can be used to detect and decide what the image is.
 
+
+I used https://github.com/mdymel/superfastblur for the gaussian blur feature.
+
 *ImageSynth is extremely buggy and primitive. It's not designed to be used in a real scenario, it's just for fun.*
 
 <!-- ---
